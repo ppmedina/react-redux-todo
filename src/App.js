@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import TodoForm from './TodoForm';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <React.Fragment>
+      <Typography align="center" variant="h2" gutterBottom>
+      To-Do App
+      </Typography>
+
+      <Grid container justify="center">
+        <Grid item>
+          <TodoForm
+            
+          />
+        </Grid>
+      </Grid>
+
+      <Grid container justify="center">
+        <Grid item md={6}>
+          {/*<TodoList
+            todos={this.state.todos}
+            toggleCompleted={this.toggleCompleted}
+            deleteTodo={this.deleteTodo}
+          />*/}
+        </Grid>
+      </Grid>
+    </React.Fragment>
+  )
 }
+
+
 
 export default App;
