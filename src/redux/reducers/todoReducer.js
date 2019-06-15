@@ -35,7 +35,7 @@ export default (state= INITIAL_STATE, action) => {
         todos: state.todos.filter((_, i) => i != action.payload)
       };
     case TOGGLE_COMPLETED:
-      const todos = state.todos;
+      const todos = [...state.todos];
       todos[action.payload].completed = !todos[action.payload].completed;
       return {
         ...state,
